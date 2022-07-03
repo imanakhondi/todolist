@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    background-color: violet;
+    align-items: center;
+    width: 25rem;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px;
+}
+.button{
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container button{
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    color: #504c4c;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: red;
+}
