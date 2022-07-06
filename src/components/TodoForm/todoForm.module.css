@@ -4,3 +4,26 @@
     justify-content: space-between;
     width: 25rem;
 }
+.container button{
+    outline: none;
+    border: none;
+    background: #D9ECF2;
+}
+.container button svg{
+    width: 20px;
+    height: 20px;
+    color: #1AA6B7;
+}
+.form{
+    display: flex;
+}
+.form input{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 4px;
+    border: 1px solid #1AA6B7;
+    height: 19px;
+}
+.form input:focus{
+    border: 2px solid #1AA6B7;
+    outline: none;
+}

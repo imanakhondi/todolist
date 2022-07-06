@@ -2,6 +2,15 @@ body {
   margin: 0;
  padding: 0;
  box-sizing: border-box;
+ background-color: #D9ECF2
 }
 
-
+.css-1s2u09g-control {
+  border: 1px solid #1AA6B7!important;
+}
+.css-1pahdxg-control {
+  box-shadow: 0 0 0 1px #1AA6B7!important;
+}
+.css-1pahdxg-control:hover {
+  border: 1px solid #1AA6B7!important;
+}

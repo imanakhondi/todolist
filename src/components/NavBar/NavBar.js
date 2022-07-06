@@ -1,6 +1,8 @@
+import styles from "./navBar.module.css"
+
 const NavBar = ({ totalItems }) => {
-  return <div>
-   unCompleted Todo :
+  return <div className={styles.container}>
+  <div> uncompleted Todo :</div>
     <span>{totalItems}</span>
     </div>;
 };

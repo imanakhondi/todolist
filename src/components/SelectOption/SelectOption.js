@@ -1,5 +1,6 @@
 import Select from "react-select";
 
+
 const SelectOption = (props) => {
   const options = [
     { value: "all", label: "all" },
@@ -14,7 +15,12 @@ const SelectOption = (props) => {
 
   return (
     <div>
-      <Select value={props.value} onChange={changeHandler} options={options} />
+      <Select
+        value={props.value}
+        onChange={changeHandler}
+        options={options}
+        
+      />
     </div>
   );
 };

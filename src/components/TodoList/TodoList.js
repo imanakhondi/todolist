@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Todo from "../Todo/Todo";
 import TodoForm from "../TodoForm/TodoForm";
+import styles from "./todoList.module.css"
 
 const TodoList = (props) => {
   const [edit, setEdit] = useState({ id: null, text: "", isCompleted: false });
@@ -27,7 +28,7 @@ const TodoList = (props) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {edit.id ? (
         <TodoForm addTodoHandler={editTodo} edit={edit} />
       ) : (

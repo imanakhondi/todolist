@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import SelectOption from "../SelectOption/SelectOption";
 import styles from "./todoForm.module.css"
+import { BsPlusSquare } from "react-icons/bs";
+import { BiRefresh } from "react-icons/bi";
+
+
 
 const TodoForm = ({ edit, addTodoHandler,onChange ,value,setOption}) => {
   const [todo, setTodo] = useState(edit ? edit.text : "");
@@ -27,7 +31,7 @@ const TodoForm = ({ edit, addTodoHandler,onChange ,value,setOption}) => {
   return (
    <div className={styles.container}>
      <form onSubmit={submitHandler}>
-      <div>
+      <div className={styles.form}>
         <input
           onChange={changeHandler}
           type="text"
@@ -35,10 +39,10 @@ const TodoForm = ({ edit, addTodoHandler,onChange ,value,setOption}) => {
           placeholder={edit ? " update todo..." : "add todo..."}
           ref={inputRef}
         />
-        <button type="submit">{edit ? " update" : "add "}</button>
+        <button type="submit">{edit ?  <BiRefresh/>: <BsPlusSquare/>}</button>
       </div>
     </form>
-    <SelectOption onChange={onChange} value={value} setOption={setOption}/>
+    {/* <SelectOption onChange={onChange} value={value} setOption={setOption}/> */}
    </div>
   );
 };

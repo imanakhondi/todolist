@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBar from "../NavBar/NavBar";
+import SelectOption from "../SelectOption/SelectOption";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoList from "../TodoList/TodoList";
 import styles from "./todoApp.module.css";
@@ -70,12 +71,15 @@ const TodoApp = () => {
   return (
     <div className={styles.container}>
       <NavBar totalItems={totalItems} />
-      <TodoForm
-        addTodoHandler={addTodo}
-        onChange={selectTodo}
-        value={option}
-        setOption={setOption}
-      />
+      <div className={styles.selectform} >
+        <TodoForm addTodoHandler={addTodo} />
+        <SelectOption
+          onChange={selectTodo}
+          value={option}
+          setOption={setOption}
+          
+        />
+      </div>
       <TodoList
         todos={filterTodo}
         onDelete={deleteHandler}
