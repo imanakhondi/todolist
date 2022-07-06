@@ -5,11 +5,12 @@ import TodoForm from "../TodoForm/TodoForm";
 const TodoList = (props) => {
   const [edit, setEdit] = useState({ id: null, text: "", isCompleted: false });
 
-  const editHandler = (input) => {
+  const editTodo = (input) => {
     props.onUpdateTodo(edit.id, input);
     setEdit("");
   };
   const renderTodos = () => {
+    if (props.todos.length===0) return <div>Import todo</div>
     return props.todos.map((todo) => {
       return (
         <div>
@@ -28,7 +29,7 @@ const TodoList = (props) => {
   return (
     <div>
       {edit.id ? (
-        <TodoForm addTodoHandler={editHandler} edit={edit} />
+        <TodoForm addTodoHandler={editTodo} edit={edit} />
       ) : (
         renderTodos()
       )}
