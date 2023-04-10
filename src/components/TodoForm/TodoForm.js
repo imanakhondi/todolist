@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import SelectOption from "../SelectOption/SelectOption";
 import styles from "./todoForm.module.css"
 import { BsPlusSquare } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
-
+import {  toast } from 'react-toastify';
 
 
 const TodoForm = ({ edit, addTodoHandler,onChange ,value,setOption}) => {
@@ -20,6 +19,7 @@ const TodoForm = ({ edit, addTodoHandler,onChange ,value,setOption}) => {
     }
     e.preventDefault();
     addTodoHandler(todo);
+    toast.success(`${todo} added successfully`)
     setTodo("");
   };
 

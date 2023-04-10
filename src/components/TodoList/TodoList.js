@@ -11,10 +11,10 @@ const TodoList = (props) => {
     setEdit("");
   };
   const renderTodos = () => {
-    if (props.todos.length===0) return <div>Import todo</div>
-    return props.todos.map((todo) => {
+    if (props.todos.length===0) return <h3>Import todo</h3>
+    return props.todos.map((todo,index) => {
       return (
-        <div>
+        <div key={index}>
           <Todo
             todo={todo}
             key={todo.id}
